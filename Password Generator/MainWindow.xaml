@@ -1,0 +1,32 @@
+﻿<Window x:Class="Password_Generator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Generator"
+        mc:Ignorable="d"
+        Title="Password Generator" Height="400" Width="600" ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="#99262F49" AllowsTransparency="True" WindowStyle="None" BorderThickness="1" BorderBrush="#FF0E0D4E" Foreground="#EEEE" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+    <Grid>
+        <CheckBox x:Name="checkBoxLowercase" Content="Букви нижнього регістра: (abcdefghijklmnopqrstuvwxyz)" HorizontalAlignment="Left" Margin="30,66,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <CheckBox x:Name="checkBoxUpperCase" Content="Букви вернього регістра: (ABCDEFGHIJKLMNOPQRSTUVWXYZ)" HorizontalAlignment="Left" Margin="30,86,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <CheckBox x:Name="checkBoxDigits" Content="Цифри: (0123456789)" HorizontalAlignment="Left" Margin="30,106,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <CheckBox x:Name="checkBoxSpecial" Content="Спеціальні символи: (%$#@!?):" HorizontalAlignment="Left" Margin="30,126,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <CheckBox x:Name="checkBoxEvenMoreSpecial" Content="Додаткові спец. символи: (():;[]{}&lt;>,./\|*+-_):" HorizontalAlignment="Left" Margin="30,149,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <TextBox x:Name="textBoxPasswordLength" HorizontalAlignment="Left" Height="27" Margin="178,187,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="69" FontSize="16"
+                 Background="#72262F49" BorderThickness="1" BorderBrush="#FF0E0D4E" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight" TextAlignment="Center"/>
+        <Label Content="Довжина паролю:" HorizontalAlignment="Left" Margin="30,183,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight"/>
+        <Button x:Name="ButtonGenerate" Content="Згенерувати" Margin="460,236,33,0" VerticalAlignment="Top" Click="ButtonGenerate_Click" Height="69" FontSize="16"
+                Background="#72262F49" BorderThickness="1" BorderBrush="#FF0E0D4E" Foreground="#EEEE" FontFamily="Cascadia Mono SemiLight">
+        </Button>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="138" Margin="30,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" FontSize="16"
+                 Background="#72262F49" BorderThickness="1" BorderBrush="#FF0E0D4E" Foreground="#EEEE" IsReadOnly="True" FontFamily="Cascadia Mono SemiLight"/>
+        <Button x:Name="ButtonReturn" Content="Зкопіювати" Margin="460,310,33,0" VerticalAlignment="Top" Click="ButtonReturn_Click" FontSize="16"
+                Background="#72262F49" BorderThickness="1" BorderBrush="#FF0E0D4E" Foreground="#EEEE" Height="64" FontFamily="Cascadia Mono SemiLight"/>
+        <Label Content="Виберіть з яких даних генерувати пароль:" Margin="30,22,0,0" VerticalAlignment="Top" FontSize="22" Foreground="#EEEE" HorizontalAlignment="Left" Width="535" FontFamily="Cascadia Mono SemiLight"/>
+        <Label x:Name="Close_Button" Content="✕" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="18" Foreground="White" Margin="570,-4,0,0" Height="31" MouseDown="Close_Button_MouseDown"/>
+
+    </Grid>
+
+</Window>
